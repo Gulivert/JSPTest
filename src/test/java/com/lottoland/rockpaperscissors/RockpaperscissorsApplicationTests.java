@@ -53,5 +53,14 @@ public class RockpaperscissorsApplicationTests {
 		gameService.addGame(game);
 		assertFalse(gameService.getAllGames().isEmpty());
 	}
+	
+	@Test
+	public void resumeTest() {
+		Resume resume = new Resume();
+		resume.incrementP1Wins();
+		resume.incrementP2Wins();
+		resume.incrementDraws();
+		assertThat(resume.getRounds(), is(3));
+	}
 
 }
