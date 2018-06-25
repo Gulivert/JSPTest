@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.lottoland.rockpaperscissors.model.Game;
 import com.lottoland.rockpaperscissors.model.Move;
 import com.lottoland.rockpaperscissors.model.Player;
+import com.lottoland.rockpaperscissors.model.Resume;
 import com.lottoland.rockpaperscissors.model.impl.ConstantPlayer;
 import com.lottoland.rockpaperscissors.model.impl.RandomPlayer;
 import com.lottoland.rockpaperscissors.service.GameService;
@@ -36,6 +37,7 @@ public class GameController {
 	@RequestMapping("/")
 	public String index(Model model) {
 		model.addAttribute("games", gameService.getAllGames());
+		model.addAttribute("resume", gameService.getResume().orElse(new Resume()));
 		return "index";
 	}
 	
@@ -48,6 +50,7 @@ public class GameController {
 	public String create(Model model) {
 		gameService.addGame(new Game(player1, player2));
 		model.addAttribute("games", gameService.getAllGames());
+		model.addAttribute("resume", gameService.getResume().orElse(new Resume()));
 		return "index";
 	}
 	
@@ -60,6 +63,7 @@ public class GameController {
 	public String restart(Model model) {
 		gameService.restartGames();
 		model.addAttribute("games", gameService.getAllGames());
+		model.addAttribute("resume", gameService.getResume().orElse(new Resume()));
 		return "index";
 	}
 }

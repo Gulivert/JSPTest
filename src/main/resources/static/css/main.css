@@ -12,6 +12,19 @@
 	float: left;
 }
 
+.resume {
+	float: left;
+}
+
+/* .btn-success:active { */
+/* 	-moz-box-shadow: inset 0 0 0px white; */
+/* 	-webkit-box-shadow: inset 0 0 0px white; */
+/* 	box-shadow: inset 0 0 0px white; */
+/* 	color: #fff; */
+/* 	background-color: #5cb85c; */
+/* 	border-color: #4cae4c; */
+/* } */
+
 .btn-success:focus, .btn-success:hover {
 	-moz-box-shadow: inset 0 0 0px white;
 	-webkit-box-shadow: inset 0 0 0px white;
@@ -19,3 +32,9 @@
 	background-color: #5cb85c;
 	border-color: #4cae4c;
 }
+
+/* .btn-success { */
+/* 	color: #fff; */
+/* 	background-color: #5cb85c; */
+/* 	border-color: #4cae4c; */
+/* } */
