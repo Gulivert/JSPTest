@@ -59,5 +59,39 @@ public class Game {
 	public void setWinner(int winner) {
 		this.winner = winner;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("- Game:\n\t");
+		if (movePlayer1 != null) {
+			builder.append("MovePlayer1 = ");
+			builder.append(movePlayer1);
+			builder.append("  ");
+		}
+		if (movePlayer2 != null) {
+			builder.append("MovePlayer2 = ");
+			builder.append(movePlayer2);
+			builder.append("  ");
+		}
+		builder.append("Winner = ");
+		switch (winner) {
+		case 0:
+			builder.append("Draw");
+			break;
+		case 1:
+			builder.append("Player 1");
+			break;
+		case 2:
+			builder.append("Player 2");
+			break;
+		}
+		return builder.toString();
+	}
+	
+	
 	
 }

@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -18,7 +19,10 @@ import com.lottoland.rockpaperscissors.model.impl.RandomPlayer;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RockpaperscissorsApplicationTests {
-
+	
+	@Autowired
+	GameService gameService;
+	
 	@Test
 	public void gameTest() {
 		Player player1 = new RandomPlayer();
@@ -35,6 +39,16 @@ public class RockpaperscissorsApplicationTests {
 		assertThat(game.getWinner(),is(0));
 	}
 	
-	
+	@Test
+	public void serviceTest() {
+		assertTrue(gameService.getAllGames());
+		
+		Player player1 = new ConstantPlayer(Move.PAPER);
+		Player player2 = new ConstantPlayer(Move.ROCK);
+		Game game = new Game(player1, player2);
+		
+		gameService.addGame(game);
+		assertFalse(gameService.getAllGames());
+	}
 
 }
