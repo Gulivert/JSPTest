@@ -2,7 +2,9 @@ package com.lottoland.rockpaperscissors;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +17,7 @@ import com.lottoland.rockpaperscissors.model.Move;
 import com.lottoland.rockpaperscissors.model.Player;
 import com.lottoland.rockpaperscissors.model.impl.ConstantPlayer;
 import com.lottoland.rockpaperscissors.model.impl.RandomPlayer;
+import com.lottoland.rockpaperscissors.service.GameService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -41,14 +44,14 @@ public class RockpaperscissorsApplicationTests {
 	
 	@Test
 	public void serviceTest() {
-		assertTrue(gameService.getAllGames());
+		assertTrue(gameService.getAllGames().isEmpty());
 		
 		Player player1 = new ConstantPlayer(Move.PAPER);
 		Player player2 = new ConstantPlayer(Move.ROCK);
 		Game game = new Game(player1, player2);
 		
 		gameService.addGame(game);
-		assertFalse(gameService.getAllGames());
+		assertFalse(gameService.getAllGames().isEmpty());
 	}
 
 }
