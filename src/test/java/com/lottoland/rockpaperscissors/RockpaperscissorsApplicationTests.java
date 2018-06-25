@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.lottoland.rockpaperscissors.model.Game;
 import com.lottoland.rockpaperscissors.model.Move;
 import com.lottoland.rockpaperscissors.model.Player;
+import com.lottoland.rockpaperscissors.model.Resume;
 import com.lottoland.rockpaperscissors.model.impl.ConstantPlayer;
 import com.lottoland.rockpaperscissors.model.impl.RandomPlayer;
 import com.lottoland.rockpaperscissors.service.GameService;

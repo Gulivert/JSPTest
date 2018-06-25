@@ -44,6 +44,25 @@
 						</form>
 					</div>
 				</div>
+				<div class="resume">
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<button type="button" class="btn btn-success">
+							Rounds: <span class="badge"><c:out
+									value="${resume.rounds}" /></span>
+						</button>
+						<button type="button" class="btn btn-success">
+							P1 wins: <span class="badge"><c:out
+									value="${resume.p1Wins}" /></span>
+						</button>
+						<button type="button" class="btn btn-success">
+							P2 wins: <span class="badge"><c:out
+									value="${resume.p2Wins}" /></span>
+						</button>
+						<button class="btn btn-success">
+							Draws: <span class="badge"><c:out value="${resume.draws}" /></span>
+						</button>
+					</div>
+				</div>
 			</div>
 
 			<table class="table">
