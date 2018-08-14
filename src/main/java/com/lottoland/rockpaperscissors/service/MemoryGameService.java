@@ -8,13 +8,11 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.SessionScope;
 
 import com.lottoland.rockpaperscissors.model.Game;
 import com.lottoland.rockpaperscissors.model.Resume;
 
 @Service
-@SessionScope
 public class MemoryGameService implements GameService {
 
 	Logger LOGGER = LoggerFactory.getLogger(this.getClass());
