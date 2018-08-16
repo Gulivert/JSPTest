@@ -1,7 +1,7 @@
-package com.lottoland.rockpaperscissors.model.impl;
+package com.rockpaperscissors.model.impl;
 
-import com.lottoland.rockpaperscissors.model.Move;
-import com.lottoland.rockpaperscissors.model.Player;
+import com.rockpaperscissors.model.Move;
+import com.rockpaperscissors.model.Player;
 
 public class ConstantPlayer implements Player{
 	

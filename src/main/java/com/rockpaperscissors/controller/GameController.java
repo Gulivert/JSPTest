@@ -1,4 +1,4 @@
-package com.lottoland.rockpaperscissors.controller;
+package com.rockpaperscissors.controller;
 
 public interface GameController {
 	public void play(Integer mode, Integer destination);

@@ -1,4 +1,4 @@
-package com.lottoland.rockpaperscissors;
+package com.rockpaperscissors.test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -12,55 +12,43 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.lottoland.rockpaperscissors.model.Game;
-import com.lottoland.rockpaperscissors.model.Move;
-import com.lottoland.rockpaperscissors.model.Player;
-import com.lottoland.rockpaperscissors.model.Resume;
-import com.lottoland.rockpaperscissors.model.impl.ConstantPlayer;
-import com.lottoland.rockpaperscissors.model.impl.RandomPlayer;
-import com.lottoland.rockpaperscissors.service.GameService;
+import com.rockpaperscissors.model.Game;
+import com.rockpaperscissors.model.Move;
+import com.rockpaperscissors.model.Player;
+import com.rockpaperscissors.model.Resume;
+import com.rockpaperscissors.model.impl.ConstantPlayer;
+import com.rockpaperscissors.model.impl.RandomPlayer;
+import com.rockpaperscissors.service.GameService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RockpaperscissorsApplicationTests {
-	
+
 	@Autowired
-	GameService gameService;
-	
+	private GameService gameService;
+
 	@Test
 	public void gameTest() {
 		Player player1 = new RandomPlayer();
 		Player player2 = new ConstantPlayer(Move.ROCK);
 		Game game = new Game(player1, player2);
-		assertThat(game.getWinner(),not(-1));
+		assertThat(game.getWinner(), not(-1));
 	}
-	
+
 	@Test
 	public void equalCaseTest() {
 		Player player1 = new ConstantPlayer(Move.ROCK);
 		Player player2 = new ConstantPlayer(Move.ROCK);
 		Game game = new Game(player1, player2);
-		assertThat(game.getWinner(),is(0));
+		assertThat(game.getWinner(), is(0));
 	}
-	
-	@Test
-	public void serviceTest() {
-		assertTrue(gameService.getAllGames().isEmpty());
-		
-		Player player1 = new ConstantPlayer(Move.PAPER);
-		Player player2 = new ConstantPlayer(Move.ROCK);
-		Game game = new Game(player1, player2);
-		
-		gameService.addGame(game);
-		assertFalse(gameService.getAllGames().isEmpty());
-	}
-	
+
 	@Test
 	public void resumeTest() {
 		Resume resume = new Resume();
-		resume.incrementP1Wins();
-		resume.incrementP2Wins();
-		resume.incrementDraws();
+		resume.incrementWinner(0);
+		resume.incrementWinner(1);
+		resume.incrementWinner(2);
 		assertThat(resume.getRounds(), is(3));
 	}
 

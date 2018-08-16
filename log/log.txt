@@ -1,0 +1,43 @@
+569  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 3596 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+573  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2577 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.373 seconds (JVM running for 3.266)
+446  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 14040 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+448  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2042 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 1.864 seconds (JVM running for 2.564)
+9872 [main] ERROR c.r.s.impl.RestPlayerServiceImpl - org.apache.http.conn.HttpHostConnectException: Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+518  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 5124 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+523  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2584 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.384 seconds (JVM running for 3.268)
+555  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 7612 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+560  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2487 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.284 seconds (JVM running for 3.132)
+526  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 13328 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+530  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2533 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.318 seconds (JVM running for 3.29)
+521  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 4348 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+525  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+3172 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.974 seconds (JVM running for 3.833)
+575  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 14052 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+579  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2835 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.599 seconds (JVM running for 3.552)
+18769 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.rockpaperscissors.RockpaperscissorsApplication.main(RockpaperscissorsApplication.java:12)
+Caused by: java.lang.NullPointerException: null
+	at com.rockpaperscissors.model.Game.<init>(Game.java:11)
+	at com.rockpaperscissors.factory.GameFactory.createGame(GameFactory.java:20)
+	at com.rockpaperscissors.controller.impl.GameControllerImpl.play(GameControllerImpl.java:37)
+	at com.rockpaperscissors.command.CommandRunner.run(CommandRunner.java:73)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	... 5 common frames omitted
+506  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 15004 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+510  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2455 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.265 seconds (JVM running for 3.185)
+522  [main] INFO  c.r.RockpaperscissorsApplication - Starting RockpaperscissorsApplication on DESKTOP-5C0QNOI with PID 5860 (C:\Users\guill\Desktop\JSPTest\target\classes started by guill in C:\Users\guill\Desktop\JSPTest)
+526  [main] INFO  c.r.RockpaperscissorsApplication - No active profile set, falling back to default profiles: default
+2476 [main] INFO  c.r.RockpaperscissorsApplication - Started RockpaperscissorsApplication in 2.268 seconds (JVM running for 3.138)

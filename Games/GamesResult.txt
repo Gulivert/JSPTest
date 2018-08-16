@@ -1,0 +1,6 @@
+
+Player 1 move = Scissors  Player 2 move = Scissors  Winner = Draw
+Player 1 move = Paper  Player 2 move = Scissors  Winner = Player 2
+Player 1 move = Paper  Player 2 move = Rock  Winner = Player 1
+Player 1 move = Rock  Player 2 move = Rock  Winner = Draw
+Rounds = 4  P1Wins = 1  P2Wins = 1  Draws = 2
